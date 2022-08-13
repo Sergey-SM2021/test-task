@@ -1,0 +1,28 @@
+.counter{
+  height: 28px;
+  display: flex;
+  border: solid 2px black;
+  width: 100px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+  &__button{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: 2px solid black;
+    height: 100%;
+    width: 33%;
+    background-color: inherit;
+    border-top: 0;
+    border-bottom: 0;
+    border-top: 0;
+    &_left{
+      border-left: 0;
+    }
+    &_right{
+      border-right: 0;
+    }
+  }
+}
