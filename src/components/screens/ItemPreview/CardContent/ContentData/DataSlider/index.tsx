@@ -27,7 +27,7 @@ export const DataSlider = () => {
         <div className={style.dataSlider__content}>
             {
                 currentSlide === 'property' ?
-                Object.keys(property).map((el,index)=>(<SliderProperty type={el} value={Object.values(property)[index]} />)):
+                Object.keys(property).map((el,index)=>(<SliderProperty key={el} type={el} value={Object.values(property)[index]} />)):
                     currentSlide === 'reviews' ? <SliderReviews/> : <SliderDescription/>
             }
         </div>

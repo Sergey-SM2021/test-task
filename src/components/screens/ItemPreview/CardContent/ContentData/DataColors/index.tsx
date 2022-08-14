@@ -13,7 +13,7 @@ export const DataColors = () => {
     return(<div className={style.data__colors}>
         <div className={style.colors__title}>Цвет:</div>
         <div className={style.colors}>
-            {colors.map(el => <div onClick={()=>{chooseColorHandler(el.id)}} style={{backgroundColor:el.color}} className={cn([style.colors__color,el.id===currentColor&&style.colors__color_active])}/>)}
+            {colors.map(el => <div key={el.id} onClick={()=>{chooseColorHandler(el.id)}} style={{backgroundColor:el.color}} className={cn([style.colors__color,el.id===currentColor&&style.colors__color_active])}/>)}
         </div>
     </div>)
 }

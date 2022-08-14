@@ -2,7 +2,7 @@ import style from './CardHeader.module.scss'
 import NikeLogo from 'assets/NikeLogo.svg'
 
 import {HeaderCart} from "./HeaderCart";
-import {useItem} from "../../../../store/selectors";
+import {useItem} from "store/selectors";
 
 export const CardHeader = () => {
     const {title} = useItem()

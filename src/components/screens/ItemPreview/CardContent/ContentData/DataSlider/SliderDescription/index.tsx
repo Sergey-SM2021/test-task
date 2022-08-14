@@ -1,6 +1,6 @@
-import {useAppSelector} from "hooks/useAppSelector";
+import {useItem} from "../../../../../../../store/selectors";
 
 export const SliderDescription = () => {
-    const {description} = useAppSelector(state => state.shoesReducer.item)
-    return(<>{description}</>)
+    const {description} = useItem()
+    return(<div>{description}</div>)
 }

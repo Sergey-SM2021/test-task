@@ -6,4 +6,7 @@
     justify-content: normal;
     flex-direction: column;
   }
+  @media (max-width:425px) {
+    gap: 0;
+  }
 }

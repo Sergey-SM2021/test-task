@@ -2,14 +2,14 @@ import style from './ContentData.module.scss'
 import {DataColors} from "./DataColors"
 import {DataActions} from "./DataActions"
 import {DataSlider} from "./DataSlider"
-import {useAppSelector} from "../../../../../hooks/useAppSelector"
+import {useItem} from "store/selectors"
 
 interface TProps {
     
 }
 
 export const ContentData = () => {
-    const {price} = useAppSelector(state => state.shoesReducer.item)
+    const {price} = useItem()
     return(<div className={style.contentData}>
         <div className={style.contentData__price}>{price}<span className={style.contentData__symbol}>₽</span></div>
         <DataColors/>
