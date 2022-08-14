@@ -1,14 +1,19 @@
 import style from './DataColors.module.scss'
-import cn from 'classnames'
+import {useAppSelector} from "hooks/useAppSelector"
+import cn from "classnames"
+import {setCurrentColor} from "store/reducers/shoesReducer/shoesReducer.actions"
+import {useAppDispatch} from "hooks/useAppDispatch"
 
 export const DataColors = () => {
+    const dispatch = useAppDispatch()
+    const {colors,currentColor} = useAppSelector(state => state.shoesReducer.item)
+    const chooseColorHandler = (id:string) => {
+      dispatch(setCurrentColor(id))
+    }
     return(<div className={style.data__colors}>
         <div className={style.colors__title}>Цвет:</div>
         <div className={style.colors}>
-            <div className={cn([style.colors__color,style['colors__color_grey-dark']])}/>
-            <div className={cn([style.colors__color,style.colors__color_grey])}/>
-            <div className={cn([style.colors__color,style.colors__color_blue])}/>
-            <div className={cn([style.colors__color,style.colors__color_orange])}/>
+            {colors.map(el => <div onClick={()=>{chooseColorHandler(el.id)}} style={{backgroundColor:el.color}} className={cn([style.colors__color,el.id===currentColor&&style.colors__color_active])}/>)}
         </div>
     </div>)
 }

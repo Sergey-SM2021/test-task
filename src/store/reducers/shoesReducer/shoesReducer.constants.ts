@@ -1,0 +1,1 @@
+export type SET_CURRENT_COLOR = "SET_CURRENT_COLOR"

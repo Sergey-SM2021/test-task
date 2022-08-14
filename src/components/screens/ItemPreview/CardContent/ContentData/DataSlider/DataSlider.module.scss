@@ -4,12 +4,21 @@
     width: 100%;
     gap: 10px;
     justify-content: space-around;
-    border-bottom: 1px solid #c2c2c2;
     padding-bottom: 4px;
     margin-bottom: 30px;
-    li{
-      font-weight: 400;
-      font-size: 14px;
+    border-bottom: 1px solid #c2c2c2;
+  }
+}
+
+.header{
+  &__link{
+    font-weight: 400;
+    font-size: 14px;
+    &:hover{
+      cursor: pointer;
+    }
+    &_active{
+      font-weight: 700;
     }
   }
 }

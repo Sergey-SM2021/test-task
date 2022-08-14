@@ -1,4 +1,5 @@
-.cardContent__media{
+.ContentMedia{
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -13,18 +14,23 @@
   @media (max-width: 662px) {
     width: 100%;
   }
-}
-
-.cardContent__media-variants{
-  display: flex;
-  padding: 0 30px;
-  gap:30px;
-  @media (max-width: 900px) {
-    padding: 0 10px;
-    gap:10px;
+  &__variants{
+    display: flex;
+    padding: 0 30px;
+    gap:30px;
+    @media (max-width: 900px) {
+      padding: 0 10px;
+      gap:10px;
+    }
+    @media (max-width: 662px) {
+      justify-content: space-around;
+    }
   }
-  @media (max-width: 662px) {
-    justify-content: space-around;
+  &__id{
+    position: absolute;
+    top: -1.1em;
+    left: 0;
+    color: #CDCDCD;
   }
 }
 
