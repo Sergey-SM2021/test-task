@@ -2,7 +2,7 @@ import style from './DataSlider.module.scss'
 import {SliderProperty} from "./SliderProperty"
 import {SliderReviews} from "./SliderReviews"
 import {useAppSelector} from "hooks/useAppSelector"
-import {useState} from "react"
+import {memo, useState} from "react"
 import cn from "classnames"
 import {SliderDescription} from "./SliderDescription"
 
@@ -12,7 +12,7 @@ enum ISlider {
     "reviews" = "reviews"
 }
 
-export const DataSlider = () => {
+export const DataSlider = memo(() => {
     const [currentSlide,setCurrentSlide] = useState<ISlider>(ISlider.property)
     const {property} = useAppSelector(state => state.shoesReducer.item)
     const linkHandler = (type:ISlider) => {
@@ -32,4 +32,4 @@ export const DataSlider = () => {
             }
         </div>
     </div>)
-}
+})

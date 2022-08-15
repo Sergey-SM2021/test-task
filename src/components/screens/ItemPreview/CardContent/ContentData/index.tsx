@@ -3,12 +3,13 @@ import {DataColors} from "./DataColors"
 import {DataActions} from "./DataActions"
 import {DataSlider} from "./DataSlider"
 import {useItem} from "store/selectors"
+import {memo} from "react";
 
 interface TProps {
     
 }
 
-export const ContentData = () => {
+export const ContentData = memo(() => {
     const {price} = useItem()
     return(<div className={style.contentData}>
         <div className={style.contentData__price}>{price}<span className={style.contentData__symbol}>₽</span></div>
@@ -16,4 +17,4 @@ export const ContentData = () => {
         <DataActions/>
         <DataSlider/>
     </div>)
-}
+})

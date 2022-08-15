@@ -4,13 +4,13 @@ import item1 from 'assets/Media/Shoes/Item1.svg'
 import item2 from 'assets/Media/Shoes/Item2.svg'
 import item3 from 'assets/Media/Shoes/Item3.svg'
 import item4 from 'assets/Media/Shoes/Item4.svg'
-import {useAppSelector} from "hooks/useAppSelector";
 import {useAppDispatch} from "hooks/useAppDispatch";
 import {setCurrentColor} from "store/reducers/shoesReducer/shoesReducer.actions";
 import {useItem} from "store/selectors";
 import cn from "classnames";
+import {memo} from "react";
 
-export const ContentMedia = () => {
+export const ContentMedia = memo(() => {
     const {innerWidth} = window
     const {currentColor, media, id} = useItem()
     const dispatch = useAppDispatch()
@@ -35,4 +35,4 @@ export const ContentMedia = () => {
                 </div>
         }
     </div>)
-}
+})

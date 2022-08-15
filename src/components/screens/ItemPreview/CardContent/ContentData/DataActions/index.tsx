@@ -4,12 +4,13 @@ import cartIcon from "assets/Icons/CartIcon.svg"
 import {useAppDispatch} from "hooks/useAppDispatch";
 import {AddItem} from "store/reducers/cartReducer/cartReducer.actions";
 import {useAppSelector} from "hooks/useAppSelector";
+import {memo} from "react";
 
 interface TProps {
 
 }
 
-export const DataActions = () => {
+export const DataActions = memo(() => {
     const {item} = useAppSelector(state => state.shoesReducer)
     const dispatch = useAppDispatch()
     const handlerAddINCart = () => {
@@ -22,4 +23,4 @@ export const DataActions = () => {
             <img src={cartIcon} alt=""/>В корзину
         </div>
     </div>)
-}
+})
