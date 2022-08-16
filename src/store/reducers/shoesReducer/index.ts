@@ -1,6 +1,4 @@
-import {IShoes} from "entity/shoes"
-
-import {IAction, IInitialState, ISetCurrentColor} from "./shoesReducer.types";
+import {IAction, IInitialState} from "./shoesReducer.types"
 
 import item1 from "assets/Media/Shoes/Item1.svg"
 import item2 from "assets/Media/Shoes/Item2.svg"
@@ -20,7 +18,7 @@ const InitialState:IInitialState = {
                 "Категория:":"Кроссовки",
                 "Производитель:":"Nike",
                 "Гарантия  :":"2 года"},
-            reviews:"",
+            reviews:[],
             colors:[
                 {color:'#39393A',id:'0'},
                 {color:'#B9B3B0',id:'1'},

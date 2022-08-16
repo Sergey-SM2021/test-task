@@ -1,6 +1,6 @@
 import style from './SliderItem.module.scss'
-import {useAppSelector} from "hooks/useAppSelector";
-import {memo} from "react";
+import {useAppSelector} from "hooks/useAppSelector"
+import {memo} from "react"
 
 export const SliderReviews = memo(() => {
     const {reviews} = useAppSelector(state => state.shoesReducer.item)

@@ -21,7 +21,7 @@ export interface IShoes{
     title: string
     property: IProperty
     description: string
-    reviews: IReviews
+    reviews: Array<IReviews>
     colors: Array<IColors>
     media: Array<IMedia>
     price: number
